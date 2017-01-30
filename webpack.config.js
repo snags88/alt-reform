@@ -4,7 +4,7 @@ var webpack        = require('webpack')
   , env            = process.env.WEBPACK_ENV
   ;
 
-var libraryName = 'library'
+var libraryName = 'AltReform'
   , outputFile  = ''
   , plugins     = []
   ;
