@@ -1,9 +1,9 @@
-import AltForm, { Namespaces } from 'Form';
+import Form, { Namespaces } from 'Form';
 import Alt from 'alt';
 
 describe('Form', function() {
   const generateForm = (opts={}) => {
-    return AltForm(
+    return Form(
       this.namespace,
       this.dispatcher,
       Object.assign({}, {fields: this.fields}, opts)

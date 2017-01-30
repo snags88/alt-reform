@@ -2,7 +2,7 @@ import React              from 'react';
 import { shallow, mount } from 'enzyme';
 import Alt                from 'alt';
 
-import AltForm, {Namespaces} from 'Form';
+import Form, {Namespaces} from 'Form';
 import FormConnector        from 'FormConnector';
 
 import jsdom from 'jsdom'
@@ -16,7 +16,7 @@ describe('AltFormConnector', function() {
     this.namespace = 'Specs'
     this.initialState = {test: '123'};
     Namespaces.reset();
-    this.form = AltForm(this.namespace, this.dispatcher, {
+    this.form = Form(this.namespace, this.dispatcher, {
       fields: {test: () => {}},
       initialState: this.initialState,
     })
