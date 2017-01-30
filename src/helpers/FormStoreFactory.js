@@ -1,4 +1,4 @@
-import FormActions from 'lib/AltFormActions';
+import FormActions from 'helpers/FormActions';
 
 const StoreFactory = (namespace, dispatcher, initialState) => {
   const {

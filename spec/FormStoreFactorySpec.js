@@ -1,7 +1,7 @@
 import StoreFactory from 'helpers/FormStoreFactory';
 import Alt          from 'alt';
 
-describe('AltFormStoreFactory', function() {
+describe('FormStoreFactory', function() {
   const generateStore = (state={}) => {
     return StoreFactory(this.namespace, this.dispatcher, state)
   }
