@@ -99,14 +99,19 @@ export default (namespace, dispatcher, opts) => {
 
   const onBlur = (ev) => { Utils.dispatchEvent(ev, blur) }
   const blur = (state) => {
-    let key = Object.keys(state)[0];
-    dispatcher.dispatch(blurred({key, state[key]}))
+    let key = Object.keys(state)[0]
+      , value = state[key]
+      ;
+
+    dispatcher.dispatch(blurred({key, value}))
   }
 
   const onFocus = (ev) => { Utils.dispatchEvent(ev, focus) }
   const focus = (state) => {
-    let key = Object.keys(state)[0];
-    dispatcher.dispatch(blurred({key, state[key]}))
+    let key = Object.keys(state)[0]
+      , value = state[key]
+      ;
+    dispatcher.dispatch(blurred({key, value}))
   }
 
   const formFields = () => {
