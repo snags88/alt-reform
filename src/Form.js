@@ -17,7 +17,7 @@ export default (namespace, dispatcher, opts) => {
     onSubmitSuccess= s => s,
     onSubmitFail= e => e,
     fields={},
-    normalizers={},
+    normalizers={}
   } = opts
 
   // get the action creators
@@ -100,15 +100,13 @@ export default (namespace, dispatcher, opts) => {
   const onBlur = (ev) => { Utils.dispatchEvent(ev, blur) }
   const blur = (state) => {
     let key = Object.keys(state)[0];
-    let value = state[key];
-    dispatcher.dispatch(blurred({key, value}))
+    dispatcher.dispatch(blurred({key, state[key]}))
   }
 
   const onFocus = (ev) => { Utils.dispatchEvent(ev, focus) }
   const focus = (state) => {
     let key = Object.keys(state)[0];
-    let value = state[key];
-    dispatcher.dispatch(focused({key, value}))
+    dispatcher.dispatch(blurred({key, state[key]}))
   }
 
   const formFields = () => {
@@ -128,7 +126,7 @@ export default (namespace, dispatcher, opts) => {
     normalize,
     change,
     blur,
-    fields: formFields,
+    fields: formFields
   }
 }
 
