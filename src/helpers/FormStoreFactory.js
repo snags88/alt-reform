@@ -50,9 +50,7 @@ const StoreFactory = (namespace, dispatcher, initialState) => {
     },
     fieldChange({state, key}) {
       let newState = { fields: state }
-      if (this.state.touched.indexOf(key) === -1) {
-        Object.assign(newState, { touched: [...this.state.touched, key]})
-      }
+      this.setNewTouchedState(newState, key);
       this.setState(newState)
     },
     fail(invalidState) {
@@ -63,10 +61,13 @@ const StoreFactory = (namespace, dispatcher, initialState) => {
     },
     blur({key, value}) {
       let newState = { focused: null }
+      this.setNewTouchedState(newState, key);
+      this.setState(newState)
+    },
+    setNewTouchedState(newState, key) {
       if (this.state.touched.indexOf(key) === -1) {
         Object.assign(newState, { touched: [...this.state.touched, key]})
       }
-      this.setState(newState)
     }
   })
 }
