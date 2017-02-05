@@ -1,1 +1,1 @@
-# alt-reform
+# Alt Reform [![Code Climate](https://codeclimate.com/github/snags88/alt-reform/badges/gpa.svg)](https://codeclimate.com/github/snags88/alt-reform) [![Build Status](https://travis-ci.org/snags88/alt-reform.svg?branch=master)](https://travis-ci.org/snags88/alt-reform)
