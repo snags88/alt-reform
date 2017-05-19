@@ -10,7 +10,7 @@ Our engineering team at the [Flatiron School](flatironschool.com) was building a
 
 When I looked at flux implementations like _Redux_, they had their own library called [Redux Form](http://redux-form.com/6.5.0/) for building forms. Hence, I decided to build a similar library that allows developers to build forms quickly with the basic functionality you would expect from web forms.
 
-> Note: this is different than the [`alt-form`](https://github.com/altjs/form) library implemented by the creator of Alt.js. This is a more updated version of working with forms using an Alt Store to track the form state.
+> Note: this is different than the [`alt-form`](https://github.com/altjs/form) library implemented by the creator of Alt.js. That library is no longer maintained and `alt-reform` is a more updated version of working with forms using an Alt Store to track the form state.
 
 ### How do I use Alt Reform?
 `alt-reform`constructs forms using 3 different parts:
